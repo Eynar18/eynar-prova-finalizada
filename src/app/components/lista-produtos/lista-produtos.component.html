@@ -1,0 +1,31 @@
+<app-detalhes-produto 
+    *ngIf="produtoSelecionado"
+    [produto]="produtoSelecionado"
+></app-detalhes-produto>
+
+<nav>
+    <button type="button" (click)="adicionar()">Adicionar Produto</button>
+    <button type="button" *ngIf="produtoSelecionado" (click)="editar(produtoSelecionado)">Editar Produto</button>
+    <button type="button" *ngIf="produtoSelecionado" (click)="removerSelecionado(produtoSelecionado)">Remover Produto</button>
+    <button type="button" *ngIf="produtoSelecionado" (click)="deselecionar()">Deselecionar Produto</button>
+</nav>
+
+<div style="overflow-x:auto;">
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Fabricante</th>
+            <th>Conteúdo</th>
+            <th>Data de Vencimento</th>
+            <th>Em Estoque</th>
+        </tr>
+        <tr *ngFor="let produto of produtos" (click)="selecionar(produto)" class="conteudo">
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.fabricante }}</td>
+            <td>{{ produto.conteudo | conteudoMedida: produto.medida }}</td>
+            <td>{{ produto.dataVencimento | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ produto.emEstoque | simNao}}</td>
+        </tr>
+    </table>
+</div>
+

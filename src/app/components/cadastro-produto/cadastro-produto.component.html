@@ -1,0 +1,39 @@
+<form [formGroup]="produtoForm" (ngSubmit)="salvar()">
+    <p>
+        <label for="nome">Nome: </label>
+        <input type="text" formControlName="nome" id="nome" placeholder="Digite o nome do produto">
+    </p>
+    <p>
+        <label for="fabricante">Fabricante: </label>
+        <input type="text" formControlName="fabricante" id="fabricante" placeholder="Digite o nome do fabricante">
+    </p>
+    <p>
+        <label for="conteudo">Conteúdo: </label>
+        <input type="number" formControlName="conteudo" id="conteudo">
+    </p>
+    <p>
+        <label for="medida">Medida: </label>
+        <select formControlName="medida" id="medida">
+            <option value="ML">ml</option>
+            <option value="L">L</option>
+            <option value="G">g</option>
+            <option value="MG">mg</option>
+            <option value="KG">Kg</option>
+            <option value="T">T</option>
+        </select>
+    </p>
+    <p>
+        <label for="dataVencimento">Data de Vencimento: </label>
+        <input type="date" formControlName="dataVencimento" id="dataVencimento">
+    </p>
+    <p>
+        <label for="emEstoque">Em Estoque: </label>
+        <select formControlName="emEstoque" id="emEstoque">
+            <option value= "true">Sim</option>
+            <option value= "">Não</option>
+        </select>
+    </p>
+
+    <button type="submit" [disabled]="produtoForm.invalid">Salvar</button>
+    <button type="reset">Limpar Campos</button>
+</form>

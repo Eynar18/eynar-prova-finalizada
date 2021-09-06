@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(11, 105, 245);
+}
+h1 {
+    font-family: "Roboto Mono", sans-serif;
+    text-shadow: 10px 10px 50px black;
+}

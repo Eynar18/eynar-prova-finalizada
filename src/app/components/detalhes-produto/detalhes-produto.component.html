@@ -1,0 +1,18 @@
+<div>
+    <p>
+        <b>Nome: </b>
+        <span>{{ produto.nome }}</span>
+    </p>
+    <p>
+        <b>Fabricante: </b>
+        <span>{{ produto.fabricante }}</span>
+    </p>
+    <p>
+        <b>Conteúdo: </b>
+        <span>{{ produto.conteudo | conteudoMedida: produto.medida }}</span>
+    </p>
+    <p>
+        <b>Data de Vencimento: </b>
+        <span>{{ produto.dataVencimento | date: 'dd/MM/yyyy' }}</span>
+    </p>
+</div>

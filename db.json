@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "nome": "Água",
+      "fabricante": "Da Guarda",
+      "conteudo": 10,
+      "medida": "ML",
+      "dataVencimento": "2022-03-18",
+      "emEstoque": "true",
+      "id": 6
+    },
+    {
+      "nome": "Arroz",
+      "fabricante": "KiArroz",
+      "conteudo": 10,
+      "medida": "KG",
+      "dataVencimento": "2022-10-22",
+      "emEstoque": "true",
+      "id": 7
+    },
+    {
+      "nome": "Margarina",
+      "fabricante": "Becel",
+      "conteudo": 500,
+      "medida": "G",
+      "dataVencimento": "2022-09-30",
+      "emEstoque": "true",
+      "id": 9
+    },
+    {
+      "nome": "Azeite",
+      "fabricante": "Encostas da Ribeira",
+      "conteudo": 500,
+      "medida": "ML",
+      "dataVencimento": "2022-04-14",
+      "emEstoque": "",
+      "id": 11
+    }
+  ]
+}
